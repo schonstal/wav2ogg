@@ -14,12 +14,14 @@ const {
 } = require('colors');
 
 let filenames = [];
+let quality = 10;
 
 program
   .version('0.0.1')
   .arguments('[files...]')
   .usage('<file ...>')
   .option('-f, --force', 'overwrite output files')
+  .option('-q, --quality [quality]', `vbr quality (default ${quality})`)
   .action((args) => {
     filenames = args;
   }).on('--help', () => {
@@ -35,6 +37,10 @@ program.parse(process.argv);
 
 if (filenames.length === 0) {
   program.help();
+}
+
+if (program.quality) {
+  quality = program.quality;
 }
 
 filenames.forEach(async (filename) => {
@@ -64,7 +70,7 @@ filenames.forEach(async (filename) => {
     audioFile.addCommand('-strict', '-2');
     audioFile.addCommand('-acodec', 'vorbis');
     audioFile.addCommand('-ac', '2');
-    audioFile.addCommand('-aq', '50');
+    audioFile.addCommand('-aq', quality);
 
     promisify(audioFile);
     let file = await audioFile.save(filename.replace(/wav/, 'ogg'));
