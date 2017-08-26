@@ -4,7 +4,7 @@ A very simple command line tool to convert wav files to ogg files.
 
 ## Dependencies
 
-* (ffmpeg)[https://www.ffmpeg.org/]
+* [ffmpeg](https://www.ffmpeg.org/)
 
 ## Installation
 
