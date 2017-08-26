@@ -1,6 +1,6 @@
 {
   "name": "wav2ogg",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple command-line tool for converting wav files to ogg files with ffmpeg",
   "main": "index.js",
   "bin": {

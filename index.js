@@ -17,7 +17,7 @@ let filenames = [];
 let quality = 10;
 
 program
-  .version('0.0.1')
+  .version('0.1.0')
   .arguments('[files...]')
   .usage('<file ...>')
   .option('-f, --force', 'overwrite output files')
