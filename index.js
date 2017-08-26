@@ -77,7 +77,7 @@ filenames.forEach(async (filename) => {
     audioFile.addCommand('-aq', quality);
 
     promisify(audioFile);
-    let file = await audioFile.save(filename.replace(/wav/, 'ogg'));
+    let file = await audioFile.save(oggFilename);
 
     console.log(`${green('success')} ${bold(filename)} converted to ${file}`);
   } catch(e) {
