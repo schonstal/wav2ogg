@@ -62,7 +62,11 @@ filenames.forEach(async (filename) => {
         console.log(`${yellow('skip')} ${bold(filename)} would overwrite ${oggFilename}. Use --force to override`);
         return;
       } catch(e) {
-        console.log('gdsfd');
+        if (e.code !== 'ENOENT') {
+          throw e;
+        }
+
+        // File doesn't exist, let's continue...
       }
     }
 
