@@ -1,0 +1,33 @@
+{
+  "name": "wav2ogg",
+  "version": "0.0.1",
+  "description": "A simple command-line tool for converting wav files to ogg files with ffmpeg",
+  "main": "index.js",
+  "bin": {
+    "wav2ogg": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schonstal/wav2ogg.git"
+  },
+  "keywords": [
+    "ffmpeg",
+    "wav",
+    "ogg",
+    "convert",
+    "transcode"
+  ],
+  "author": "Josh Schonstal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schonstal/wav2ogg/issues"
+  },
+  "homepage": "https://github.com/schonstal/wav2ogg#readme",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "ffmpeg": "^0.0.4"
+  }
+}
