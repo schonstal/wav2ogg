@@ -27,7 +27,11 @@
   },
   "homepage": "https://github.com/schonstal/wav2ogg#readme",
   "dependencies": {
+    "colors": "^1.1.2",
     "commander": "^2.11.0",
-    "ffmpeg": "^0.0.4"
+    "ffmpeg": "^0.0.4",
+    "mime": "^1.3.6",
+    "promisify-node": "^0.4.0",
+    "replace-ext": "^1.0.0"
   }
 }
