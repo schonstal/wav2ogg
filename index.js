@@ -53,6 +53,7 @@ filenames.forEach(async (filename) => {
     }
 
     let audioFile = await new ffmpeg(filename);
+    promisify(audioFile);
 
     let oggFilename = replaceExt(filename, '.ogg');
 
@@ -76,7 +77,6 @@ filenames.forEach(async (filename) => {
     audioFile.addCommand('-ac', '2');
     audioFile.addCommand('-aq', quality);
 
-    promisify(audioFile);
     let file = await audioFile.save(oggFilename);
 
     console.log(`${green('success')} ${bold(filename)} converted to ${file}`);
